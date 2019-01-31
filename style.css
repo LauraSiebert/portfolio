@@ -1,0 +1,124 @@
+/* :root {
+
+--light-pink: #f9cad7, rgba(249, 202, 215, 1)   ;
+--medium-pink: #f78fac, rgba(247, 143, 172, 1);
+--dark-pink: #fc3f77, rgba(252,63,119, 1);
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Change this */
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    /* Color main text to change */
+    color: #777777;
+    /* Maybe delete this */
+    padding: 30px;
+}
+
+.header{
+    height: 95vh;
+    background-image: /*linear-gradient(to right bottom, rgba(249, 202, 215, .3) ,  rgba(252,63,119, .3)),*/ url(/otomi-background-29.png);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    position: relative;
+}
+
+.logo-box{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+}
+
+.logo{
+    height: 75px;
+}
+
+.main-page-links, .portrait-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.portrait{
+    height:370px;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: moveInTop;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+.heading-primary{
+    color: black;
+    text-transform: uppercase;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+/* Main Page Buttons-------------------- */
+
+.main-link {
+    margin: 5px; 
+    border-radius: 5px;
+}
+
+.main-link:link, 
+.main-link:visited {
+    display: inline-flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    padding: 15px 40px;
+    transition: all 2s;
+}
+
+.main-link:hover {
+    transform: translateY(-3px);
+}
+
+.main-link:active {
+    transform: translateY(-1px);
+}
+
+#webDev-link {
+    background-color: #F87296;
+}
+
+#creative-link {
+    background-color: #FF4700;
+}
+
+#smallBiz-link {
+    background-color: #3FFFA4;
+}
+
+/* ANIMATIONS ---------------------------------- */
+@keyframes moveInTop{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
